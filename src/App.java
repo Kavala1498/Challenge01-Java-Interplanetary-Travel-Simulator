@@ -20,6 +20,17 @@ public class App {
         "El último enano de hielo."
     };
 
+    // Mostrar menú principal
+    public static void mostrarMenu() {
+        System.out.println("\n----- Menú Principal -----");
+        System.out.println("1. Selecciona un planeta");
+        System.out.println("2. Selecciona una nave");
+        System.out.println("3. Calcular recursos necesarios");
+        System.out.println("4. Simular viaje");
+        System.out.println("5. Salir");
+        System.out.print("Opción seleccionada: ");
+    }
+
     // Seleccionar un planeta
     public static void seleccionarPlaneta() {
         System.out.println("\nSelecciona un planeta:");
