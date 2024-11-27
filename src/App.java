@@ -20,6 +20,22 @@ public class App {
         "El último enano de hielo."
     };
 
+    // Seleccionar un planeta
+    public static void seleccionarPlaneta() {
+        System.out.println("\nSelecciona un planeta:");
+        for (int i = 0; i < planetas.length; i++) {
+            // Imprime el planeta junto con su distancia
+            System.out.println((i + 1) + ". " + planetas[i] + " (Distancia: " + distancias[i] + " millones de km.)");            
+        }
+        System.out.print("Selecciona el número del planeta: ");
+        planetaSeleccionado = scanner.nextInt() - 1;
+        if (planetaSeleccionado >= 0 && planetaSeleccionado < planetas.length) {
+            System.out.println("Has seleccionado: " + planetas[planetaSeleccionado]);
+            System.out.println(descripcionPlaneta[planetaSeleccionado]);
+        } else {
+            System.out.println("Selección no válida.");
+        }
+    }
 
     // Seleccionar una nave
     public static void seleccionarNave() {
