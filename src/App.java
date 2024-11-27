@@ -20,6 +20,10 @@ public class App {
         "El último enano de hielo."
     };
 
+    // Calcular tiempo de viaje
+    public static double calcularTiempoViaje(double distancia, double velocidad) {
+        return distancia / velocidad;
+    }
 
     // Simular eventos aleatorios
     public static void simularEventos() {
