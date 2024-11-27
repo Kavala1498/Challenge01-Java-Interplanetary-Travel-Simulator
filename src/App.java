@@ -20,6 +20,63 @@ public class App {
         "El último enano de hielo."
     };
 
+
+    static double[] distancias = {
+        77.0, 41.0, 628.0, 1275.0, 2723.0, 4351.0, 5906.0, 5910.0, 413.0, 
+        10100.0, 13000.0, 6700.0
+    };
+    
+    static String[] naves = {
+        "Prometheus Ark", "Astra Nova", "Cosmos Seeker",
+        "Luminous Horizon", "Galactic Dawn"
+    };
+
+    static String[] capacidadNave = { 
+        "1111 pasajeros", "300 pasajeros + 1000 embriones + 30 tripulantes + 3 deidades",
+        "1518 pasajeros, 12 tripulantes y 25 científicos", 
+        "200 pasajeros + 150 embriones + 25 científicos + 25 granjeros + 20 connoisseurs",
+        "40 pasajeros + 20 aprendices + 9 tripulantes"
+
+    };
+    
+    public static void main(String[] args) {
+        int opción;
+        System.out.println("\n*****Bienvenido al Menú Principal***** \n****escoge una opción para empezar****");
+        do {
+            mostrarMenu();
+            try {
+                opción = scanner.nextInt();
+                switch (opción) {
+                    case 1:
+                        seleccionarPlaneta();
+                        break;
+                    case 2:
+                        seleccionarNave();
+                        break;
+                    case 3:
+                        calcularRecursos();
+                        break;
+                    case 4:
+                        simularViaje();
+                        break;
+                    case 5:
+                        System.out.println("¡Hasta luego!");
+                        break;
+                    default:
+                        System.out.println("Opción no válida.");
+                        break;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Entrada inválida. Por favor, introduce un número.");
+                scanner.next(); // Limpiar el buffer
+                opción = -1;
+            }
+        } while (opción != 5);
+    }
+
+
+
+
     // Mostrar menú principal
     public static void mostrarMenu() {
         System.out.println("\n----- Menú Principal -----");
